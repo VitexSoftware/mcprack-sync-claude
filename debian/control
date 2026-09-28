@@ -8,7 +8,6 @@ Build-Depends:
  pybuild-plugin-pyproject,
  python3-all,
  python3-setuptools,
- python3-mcprack-client,
 Standards-Version: 4.7.0
 Homepage: https://github.com/VitexSoftware/mcprack-sync-claude
 Vcs-Git: https://github.com/VitexSoftware/mcprack-sync-claude.git
