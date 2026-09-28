@@ -1,0 +1,5 @@
+mcprack-sync-claude (1.0.0-1) UNRELEASED; urgency=medium
+
+  * Initial release — sync MCP config from mcprack into the local client.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 28 Sep 2026 19:55:00 +0200

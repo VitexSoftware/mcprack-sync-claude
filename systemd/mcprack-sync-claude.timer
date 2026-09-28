@@ -1,0 +1,11 @@
+[Unit]
+Description=Periodic mcprack MCP config sync for claude
+Documentation=https://github.com/VitexSoftware/mcprack-sync-claude
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

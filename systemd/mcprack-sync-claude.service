@@ -1,0 +1,9 @@
+[Unit]
+Description=Sync MCP servers from mcprack into claude
+Documentation=https://github.com/VitexSoftware/mcprack-sync-claude
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mcprack-sync-claude sync

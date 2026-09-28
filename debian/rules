@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=mcprack-sync-claude
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	@echo "skipping tests at package build (covered in mcprack-client)"
+
+override_dh_install:
+	dh_install
+	install -D -m 644 systemd/mcprack-sync-claude.service \
+		debian/mcprack-sync-claude/usr/lib/systemd/user/mcprack-sync-claude.service
+	install -D -m 644 systemd/mcprack-sync-claude.timer \
+		debian/mcprack-sync-claude/usr/lib/systemd/user/mcprack-sync-claude.timer

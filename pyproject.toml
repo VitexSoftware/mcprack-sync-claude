@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcprack-sync-claude"
+version = "1.0.0"
+description = "Keep Claude Desktop / Claude Code MCP server config in sync with mcprack"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Vítězslav Dvořák", email = "info@vitexsoftware.cz"}]
+dependencies = ["mcprack-client>=1.0.0"]
+
+[project.scripts]
+mcprack-sync-claude = "mcprack_sync_claude.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/VitexSoftware/mcprack-sync-claude"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcprack_sync_claude*"]

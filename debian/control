@@ -1,0 +1,27 @@
+Source: mcprack-sync-claude
+Section: utils
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-setuptools,
+ python3-mcprack-client,
+Standards-Version: 4.7.0
+Homepage: https://github.com/VitexSoftware/mcprack-sync-claude
+Vcs-Git: https://github.com/VitexSoftware/mcprack-sync-claude.git
+Vcs-Browser: https://github.com/VitexSoftware/mcprack-sync-claude
+Rules-Requires-Root: no
+
+Package: mcprack-sync-claude
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-mcprack-client,
+Description: keep Claude Desktop MCP config in sync with mcprack
+ Fetches the user's selected MCP servers from a mcprack instance and merges
+ them into Claude Desktop's claude_desktop_config.json (or Claude Code's
+ ~/.claude.json with --claude-code). Includes an optional systemd user timer.
